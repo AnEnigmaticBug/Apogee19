@@ -13,6 +13,13 @@ class MoreFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootPOV = inflater.inflate(R.layout.fra_more, container, false)
 
+        rootPOV.showContactsBTN.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction()
+                .replace(R.id.navHostFRM, ContactsFragment())
+                .addToBackStack(null)
+                .commitAllowingStateLoss()
+        }
+
         rootPOV.showAboutBTN.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction()
                 .replace(R.id.navHostFRM, AboutFragment())
