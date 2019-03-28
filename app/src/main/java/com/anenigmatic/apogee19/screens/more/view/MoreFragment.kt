@@ -27,6 +27,13 @@ class MoreFragment : Fragment() {
                 .commitAllowingStateLoss()
         }
 
+        rootPOV.showMapBTN.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction()
+                .replace(R.id.navHostFRM, MapFragment())
+                .addToBackStack(null)
+                .commitAllowingStateLoss()
+        }
+
         rootPOV.showSponsorsBTN.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction()
                 .replace(R.id.navHostFRM, SponsorsFragment())
