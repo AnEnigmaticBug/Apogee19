@@ -27,6 +27,13 @@ class MoreFragment : Fragment() {
                 .commitAllowingStateLoss()
         }
 
+        rootPOV.showSponsorsBTN.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction()
+                .replace(R.id.navHostFRM, SponsorsFragment())
+                .addToBackStack(null)
+                .commitAllowingStateLoss()
+        }
+
         rootPOV.showEpcBlogBTN.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction()
                 .replace(R.id.navHostFRM, EpcBlogFragment())
