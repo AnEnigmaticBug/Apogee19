@@ -2,6 +2,7 @@ package com.anenigmatic.apogee19.di.shared
 
 import com.anenigmatic.apogee19.di.events.EventsComponent
 import com.anenigmatic.apogee19.di.login.LoginComponent
+import com.anenigmatic.apogee19.di.notices.NoticesComponent
 import com.anenigmatic.apogee19.di.profile.ProfileComponent
 import com.anenigmatic.apogee19.di.tickets.TicketsComponent
 import dagger.Component
@@ -18,4 +19,6 @@ interface AppComponent {
     fun newProfileComponent(): ProfileComponent
 
     fun newTicketsComponent(): TicketsComponent
+
+    fun newNoticesComponent(): NoticesComponent
 }
